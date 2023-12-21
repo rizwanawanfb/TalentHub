@@ -17,7 +17,8 @@ body {
 
 header {
     display: flex;
-    padding: 16px 120px;
+    padding: 0px 120px;
+    height: 84px;
     align-items: center;
     flex-shrink: 0;
     background: var(--Grey-2, #F5F6F7);
@@ -37,9 +38,10 @@ header {
 .breadcrumbs {
     position: fixed;
     top: 79px;
+    height: 52px;
     left: 0;
     width: 100%;
-    padding: 16px 120px;
+    padding: 0px 120px;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -64,21 +66,22 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 42px;
     padding: 135px 120px;
 }
 
 /* section one */
 
 .section1 {
-    position: fixed;
-    width: 14%;
+    width: 264px;
     gap: 30px;
     color: var(--Foundation-Black-Black, #232323);
     /* Add additional styling to manage fixed positioning */
 }
 
 .profile_image img {
-    width: 237px;
+    width: 263px;
+    height: 291px;
     margin-bottom: 30px;
 }
 
@@ -164,8 +167,7 @@ header {
 
 .section2 {
     display: flex;flex-direction: column;
-    margin-left: 25%;
-    width: 70%;
+    max-width: 1250px;
     gap: 30px;
     padding-bottom: 50px; 
 }
@@ -184,15 +186,17 @@ h3 {
 }
 
 .videos_boxes {
+    overflow-x: auto;
     display: flex;
+    max-width: 1255px;
     align-items: flex-start;
     gap: 20px;
     justify-content: space-between;
 }
 
 .video {
-    width: 100%;
-    height: 100%;
+    min-width: 405px;
+    height: auto;
 }
 
 .video img {
@@ -278,13 +282,12 @@ h3 {
 
 footer {
     display: flex;
-    padding: 16px 120px;
+    padding: 0px 120px;
     align-items: center;
-    flex-shrink: 0;
+    height: 68px;
     background: var(--Grey-2, #F5F6F7);
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    max-width: 100%;
+    justify-content: space-between;
 }
 
 .texts {
@@ -295,4 +298,169 @@ footer {
 
 .secondery_text {
     color: #959595;
+}
+
+/* Media Queries */
+
+@media (max-width:1440px) {
+
+    .main_container {
+        max-width: 1200px;
+        gap: 42px;
+    }
+
+    .videos_boxes {
+        overflow-x: auto;
+        display: flex;
+        align-items: flex-start;
+        max-width: 782px;
+        min-width: 600px;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    
+    .video {
+        min-width: 305px;
+        height: auto;
+    }
+
+    .section1 {
+        max-width: 263px;
+        min-width: 200px;
+    }
+
+    .section2{
+        max-width: 100%;
+    }
+
+    .profile_image img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width:1040px) {
+
+    .main_container {
+        width: 582px;
+        padding: 132px 80px;
+    }
+
+    .section1 {
+        max-width: 240px;
+    }
+
+    header {
+        padding: 0px 80px;
+    }
+
+    footer {
+        padding: 0px 80px;
+    }
+
+    .breadcrumbs {
+        padding: 0px 80px;
+    }
+    
+    .videos_boxes {
+        overflow-x: auto;
+        display: flex;
+        align-items: flex-start;
+        max-width: 582px;
+        min-width: 400px;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    
+    .video {
+        min-width: 305px;
+        height: auto;
+    }
+}
+
+@media (max-width:768px) {
+
+    .main_container {
+        width: 668px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 136px 50px;
+    }
+
+    .section1 {
+        min-width: 668px;
+    }
+
+    footer {
+        padding: 0px 50px;
+    }
+
+    .main_container {
+        width: 668px;
+    }
+
+    .main_cont_content {
+        max-width: 668px;
+    }
+
+    .profile_image img {
+        width: 140px;
+        height: 154.636px;
+        margin-bottom: 20px;
+
+    }
+
+    header {
+        padding: 0px 50px;
+    }
+
+    .breadcrumbs {
+        top: 80px;
+        padding: 0px 50px;
+    }
+}
+
+@media (max-width:425px) {
+
+    .main_container {
+        width: 668px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 100px 16px;
+    }
+
+    .profile_image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+
+    .videos_boxes {
+        overflow-x: auto;
+        display: flex;
+        align-items: flex-start;
+        max-width: 668px;
+        min-width: 400px;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    
+    .video {
+        min-width: 305px;
+        height: auto;
+    }
+
+    footer {
+        min-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 80px;
+        padding: 20px 16px;
+    }
 }
