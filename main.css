@@ -15,6 +15,10 @@ body {
     'opsz' 20
 }
 
+.home-icon {
+    display: none;
+}
+
 header {
     display: flex;
     padding: 0px 120px;
@@ -455,6 +459,11 @@ footer {
         height: auto;
     }
 
+    header {
+        padding: 0px 16px;
+        justify-content: space-between;
+    }
+
     footer {
         min-width: 700px;
         display: flex;
@@ -462,5 +471,9 @@ footer {
         align-items: flex-start;
         height: 80px;
         padding: 20px 16px;
+    }
+
+    .home-icon {
+        display: flex;
     }
 }
